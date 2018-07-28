@@ -10,7 +10,7 @@
         
           <div class = "newTrip" id = "firstName">
             <div class="menuButton" (click)="dispalyAddNewTripView()" ><b>Add New Trip</b></div>
-            <div class="menuButton" (click)="dispalyTripDetailsView()" ><b>Cancel</b></div>
+            <div class="menuButton" (click)="dispalyTripDetailsView()" ><b>View Trips</b></div>
           </div>
           <!-- Display add Trip -->
           <div *ngIf="dispalyAddTrip">
@@ -39,9 +39,23 @@
             <div>
               existing trips: {{tripService.trips.length}}
             </div>
-            <!-- <div *ngFor=[()]>
-
-            </div> -->
+            <div *ngFor="let trip of tripService.trips">
+              <div class="tripDetails">
+                trip title {{trip.title}}
+              </div>
+              <div class="tripDetails">
+                trip title {{trip.country}}
+              </div>
+              <div class="tripDetails">
+                trip title {{trip.location}}
+              </div>
+              <div class="tripDetails">
+                trip title {{trip.startDate}}
+              </div>
+              <div class="tripDetails">
+                trip title {{trip.endDate}}
+              </div>
+            </div>
   
           </div>
           

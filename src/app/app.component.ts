@@ -17,12 +17,6 @@ export class AppComponent {
 
   addTrip() {
     
-    console.log('***************************');
-    console.log('title = ' + this.newTrip.title);
-    console.log('***************************');
-    console.log("Saving", this.newTrip + ' { ' + this.newTrip.title + ',' 
-    + this.newTrip.country + ',' + this.newTrip.location + ',' 
-    + this.newTrip.startDate + ',' + this.newTrip.endDate + ' }');
     this.tripService.save(this.newTrip).subscribe((result) => {
     	console.log(result);
     	this.newTrip = new Trip();	
