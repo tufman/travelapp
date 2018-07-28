@@ -6,7 +6,7 @@ export class Trip {
   type: string = 'trip';
 
   title: string = '';
-  description: string = '';
+  country: string = '';
   location: string;
   startDate: string;
   endDate: string;

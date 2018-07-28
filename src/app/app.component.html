@@ -16,20 +16,20 @@
           <div *ngIf="dispalyAddTrip">
               <div class = "newTrip" id = "title">
                   <label class = "label">Title</label>
-                  <input type = "text" placeholder="Enter title here">
+                  <input [(ngModel)]="newTrip.title" type = "text" placeholder="Enter title here">
               </div>
               <div class = "newTrip" id = "country">
                   <label class = "label">Country</label>
-                  <input type = "text" placeholder="Enter country here">  
+                  <input [(ngModel)]="newTrip.country" type = "text" placeholder="Enter country here">  
               </div>
               <div class = "newTrip" id = "location">
                   <label class = "label">Location</label>
-                  <input type = "text" placeholder="Enter location here">  
+                  <input [(ngModel)]="newTrip.location" type = "text" placeholder="Enter location here">  
               </div>
               <div class = "newTrip" id = "dates">
                   <label class = "label">Dates</label>
-                  <input type = "date" placeholder="Enter start date here">  
-                  <input type = "date" placeholder="Enter end date here">  
+                  <input [(ngModel)]="newTrip.startDate" type = "date" placeholder="Enter start date here">  
+                  <input [(ngModel)]="newTrip.endDate" type = "date" placeholder="Enter end date here">  
               </div>
               <button mat-raised-button color= "green" (click)="addTrip()">Save</button>
           </div>

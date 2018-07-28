@@ -8,14 +8,21 @@ import { Trip, TripService } from './shared';
 })
 export class AppComponent {
   newTrip :Trip = new Trip();
-
-  dispalyAddTrip = false;
+  //this.newTrip.title = '111';
+  dispalyAddTrip = true;
+  //title = "";
 
   constructor(private tripService: TripService) {
   }
 
   addTrip() {
-  	console.log("Saving", this.newTrip);
+    
+    console.log('***************************');
+    console.log('title = ' + this.newTrip.title);
+    console.log('***************************');
+    console.log("Saving", this.newTrip + ' { ' + this.newTrip.title + ',' 
+    + this.newTrip.country + ',' + this.newTrip.location + ',' 
+    + this.newTrip.startDate + ',' + this.newTrip.endDate + ' }');
     this.tripService.save(this.newTrip).subscribe((result) => {
     	console.log(result);
     	this.newTrip = new Trip();	
