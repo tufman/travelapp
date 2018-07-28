@@ -1,0 +1,70 @@
+.container {
+	width:800px;
+	margin: auto;
+}
+
+#header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+#footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.menuButton{
+	width: 120px;
+	height:20px;
+	padding:5px;
+	border:1px solid gray;
+	float:right;
+	margin-top:10px;
+	margin-right:20px;
+	text-align:center;
+	font-weight: 800;
+}
+
+/* .newTrip{
+	background-color: rgba(0, 102, 255, 0.295);
+	border-block-end: #777
+} */
+
+.label {
+	background-color: rgba(0, 255, 34, 0.096);
+	font: normal 30px courier !important;
+	float: left;
+	width: 200px;
+	margin-right: 5px;
+	display: block;
+	/* display: flex;  */
+	height: 48px;
+
+}
+
+.newTrip{
+	height: 50px;
+	border: 0.5px solid black;
+}
+
+input{
+	width: 290px;
+	height: 42px;
+}
+
+input[type=date]{
+	width: 290px;
+}
+
+
+.mat-raised-button {
+    background-color: gray;
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+

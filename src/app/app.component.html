@@ -1,0 +1,52 @@
+
+
+<div class="container">
+  <!-- <mat-tab-group> -->
+    <!-- <mat-tab label="Trips"> -->
+      <div id = "header">
+        Travel App
+      </div>
+      <div>
+        
+          <div class = "newTrip" id = "firstName">
+            <div class="menuButton" (click)="dispalyAddNewTripView()" ><b>Add New Trip</b></div>
+            <div class="menuButton" (click)="dispalyTripDetailsView()" ><b>Cancel</b></div>
+          </div>
+          <!-- Display add Trip -->
+          <div *ngIf="dispalyAddTrip">
+              <div class = "newTrip" id = "title">
+                  <label class = "label">Title</label>
+                  <input type = "text" placeholder="Enter title here">
+              </div>
+              <div class = "newTrip" id = "country">
+                  <label class = "label">Country</label>
+                  <input type = "text" placeholder="Enter country here">  
+              </div>
+              <div class = "newTrip" id = "location">
+                  <label class = "label">Location</label>
+                  <input type = "text" placeholder="Enter location here">  
+              </div>
+              <div class = "newTrip" id = "dates">
+                  <label class = "label">Dates</label>
+                  <input type = "date" placeholder="Enter start date here">  
+                  <input type = "date" placeholder="Enter end date here">  
+              </div>
+              <button mat-raised-button color= "green" (click)="addTrip()">Save</button>
+          </div>
+            <!-- Dispaly Trip Details -->
+          <div *ngIf="!dispalyAddTrip">
+            Should Dispaly Trip Details...
+  
+          </div>
+          
+      
+      </div>
+      <div id = "footer">
+      
+      </div>
+    
+    <!-- </mat-tab> -->
+    <!-- <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab> -->
+  <!-- </mat-tab-group> -->
+</div>
