@@ -15,6 +15,8 @@ export class TripService {
     
   ) {}
 
+  
+
   // 
   // list(): Observable<any> {
 
@@ -55,6 +57,14 @@ export class TripService {
       this.trips.splice(index, 1);
     }
       return this.apiService.delete(trip);
+  }
+
+  getAllDocuments(){
+    console.log('##############################################')
+    console.log('### Get All Documents from DB [trip.service]###')
+    console.log('##############################################')
+    return this.apiService.getAllDocumentsFromDB();
+    
   }
 
 

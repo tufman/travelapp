@@ -41,6 +41,7 @@ export class ApiService {
   }
 
   get(path: string, params: {}): Observable<any> {
+    //https://7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com/travelapp/2dc4b9883d955d60ab7f8ea0d58aea55
     return this.http.get(`${environment.DB_API_URL}${path}`, { headers: this.setHeaders(), params: new HttpParams(params)})
       .catch(this.formatErrors)
       .map((res:Response) => res);
@@ -53,15 +54,19 @@ export class ApiService {
   }
 
   delete(trip : Trip): Observable<any> {
-    console.log('##########################')
-    console.log('###       DELETE       ###')
-    console.log('##########################')
     console.log('should delete the following id ' + trip._id);
     console.log('should delete the following revision ' + trip._rev);
     let path = trip._id + '?rev=' + trip._rev;
    return this.http.delete(`${environment.DB_API_URL}/travelapp/${path}`, { headers: this.setHeaders() })
     .catch(this.formatErrors)
     //.map((res:Response) => res.json());
-}
+  }
+
+  getAllDocumentsFromDB(){
+    console.log('##############################################')
+    console.log('### Get All Documents from DB [api.service]###')
+    console.log('##############################################')
+    //https://7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com/travelapp/_all_docs
+  }
 
 }

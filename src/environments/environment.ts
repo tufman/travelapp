@@ -10,6 +10,7 @@ export const environment = {
   DB_KEY: '7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix',
   DB_PASSWORD: '7bc3e9c18eae30e3693380b1655ca1c0ff52375cc67e6ebb6b05aab39ce2cf79',
   DB_NAME: 'travelapp',
+  //Service: Cloudant-b0
 };
 
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Trip, TripService } from './shared';
 
 @Component({
@@ -6,7 +6,7 @@ import { Trip, TripService } from './shared';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   newTrip :Trip = new Trip();
   //this.newTrip.title = '111';
   dispalyAddTrip = true;
@@ -15,6 +15,12 @@ export class AppComponent {
 
   constructor(private tripService: TripService) {
   }
+
+  ngOnInit(){
+    //called after the constructor and called  after the first ngOnChanges() 
+    console.log('onInit called...');
+    this.tripService.getAllDocuments();
+ }
 
   addTrip() {
     console.log('addTrip()');
