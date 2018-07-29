@@ -8,7 +8,8 @@
     padding: 30px;
     text-align: center;
     font-size: 35px;
-    color: white;
+	color: white;
+	
 }
 
 #footer {
@@ -29,10 +30,66 @@
 	font-weight: 800;
 }
 
-/* .newTrip{
+ .tripDetailsFrame{
 	background-color: rgba(0, 102, 255, 0.295);
-	border-block-end: #777
-} */
+	border-block-end: #777;
+	border: dashed 2px grey;
+	margin-top: 5px;
+	/* float: left; */
+	height: auto;
+
+} 
+
+.trip{
+    width: 450px;
+    margin: auto;
+    height: auto;
+    padding: 5px;
+	/* border: 1px solid rgb(68, 47, 255); */
+	background-color: rgba(0, 255, 34, 0.096);
+    margin-bottom: 15px;
+}
+
+.row{
+	width: 450px;
+    /* margin: auto; */
+    height: auto;
+    padding: 5px;
+    /* border: 1px solid rgb(255, 47, 47); */
+    margin-bottom: 15px;
+
+}
+
+
+.tripSubject{
+	display: inline-block;
+	margin-left: 10px;
+    width: 200px;
+	height: 35;  
+	
+	/* border: 1px solid rgb(255, 47, 186); */
+	background-color: rgb(225, 216, 214);
+	padding: 5px;
+}
+
+.tripValue{
+	display: inline-block;
+	margin-left: 10px;
+    width: 200px;
+	margin-left: 5px; 
+	/* border: 1px solid rgb(255, 47, 186); */
+	background-color: rgb(225, 216, 214);
+	padding: 5px;
+
+}
+
+.deleteTrip{
+	/* display: inline-block; */
+	float:right;
+	color:black;
+	background-color: red;
+	margin-right: 15px;
+}
 
 .label {
 	background-color: rgba(0, 255, 34, 0.096);

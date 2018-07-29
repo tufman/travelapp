@@ -27,6 +27,7 @@ export class TripService {
 
   save(trip : Trip): Observable<Trip> {
     // If we're updating an existing trip
+    console.log('save()');
     if (trip._id) {
       return this.apiService.put(trip._id, {trip: trip})
              .map(data => data.trip);
@@ -48,8 +49,12 @@ export class TripService {
     }
   }
 
-  destroy(id) {
-    return this.apiService.delete(id);
+  delete(trip) {
+    let index = this.trips.indexOf(trip);
+    if (index > -1) {
+      this.trips.splice(index, 1);
+    }
+      return this.apiService.delete(trip);
   }
 
 

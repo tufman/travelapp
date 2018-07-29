@@ -11,12 +11,13 @@ export class AppComponent {
   //this.newTrip.title = '111';
   dispalyAddTrip = true;
   //title = "";
+  
 
   constructor(private tripService: TripService) {
   }
 
   addTrip() {
-    
+    console.log('addTrip()');
     this.tripService.save(this.newTrip).subscribe((result) => {
     	console.log(result);
     	this.newTrip = new Trip();	
@@ -29,6 +30,20 @@ export class AppComponent {
 
   dispalyTripDetailsView(){
     this.dispalyAddTrip = false;
+  }
+
+  // deleteTrip(id:string, revision: string){
+    deleteTrip(trip : Trip){
+    console.log('delete trip clciked...');
+    console.log('###############################')
+    console.log('###       deleteTrip       ###')
+    console.log('###############################')
+    console.log('should delete the following id ' + trip._id)
+    console.log('should delete the following revision ' + trip._rev)
+    this.tripService.delete(trip).subscribe((result) => {
+    	console.log(result);
+    	this.newTrip = new Trip();	
+    });
   }
 }
 

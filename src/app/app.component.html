@@ -1,11 +1,20 @@
-
-
 <div class="container">
   <!-- <mat-tab-group> -->
     <!-- <mat-tab label="Trips"> -->
       <div id = "header">
-        Travel App
+       Travel App
+        <!-- <img src="file://C:\git_work\angular\travelapp\src\app\2.jpg" style="width:500px;height:600px;"> -->
+        <!-- <img class="img-responsive" src="./1.PNG"> -->
+        <!-- <div class="item" style="background-image: url('../2.JPG');">2323</div> -->
+        
       </div>
+      <!-- 111
+      <img src='./2.JPG' />
+      <img src='./1.PNG' />
+      <img src='2.JPG' />
+      <img src='1.PNG' />
+      <img src='C://temp//2.JPG' />
+      222 -->
       <div>
         
           <div class = "newTrip" id = "firstName">
@@ -35,26 +44,53 @@
           </div>
             <!-- Dispaly Trip Details -->
           <div *ngIf="!dispalyAddTrip">
-            Should Dispaly Trip Details...
             <div>
               existing trips: {{tripService.trips.length}}
             </div>
-            <div *ngFor="let trip of tripService.trips">
-              <div class="tripDetails">
-                trip title {{trip.title}}
-              </div>
-              <div class="tripDetails">
-                trip title {{trip.country}}
-              </div>
-              <div class="tripDetails">
-                trip title {{trip.location}}
-              </div>
-              <div class="tripDetails">
-                trip title {{trip.startDate}}
-              </div>
-              <div class="tripDetails">
-                trip title {{trip.endDate}}
-              </div>
+            <!-- <div class = "tripDetailsFrame" *ngFor="let trip of tripService.trips"> -->
+            <div class = "trip" *ngFor="let trip of tripService.trips">
+            
+              <!-- <div class="trip"> -->
+                <div class="row">
+                    <div class="tripSubject">Trip tilte: </div>
+                    <div class="tripValue" >{{trip.title}}</div>
+                </div>
+                
+                <div class="row">
+                  <div class="tripSubject" >Trip country: </div>
+                  <div class="tripValue" >{{trip.country}}</div>
+                </div>
+              
+                <div class="row">
+                    <div class="tripSubject" >Trip location : </div>
+                    <div class="tripValue" >{{trip.location}}</div>
+                </div>
+
+                <div class="row">
+                    <div class="tripSubject" >Trip start date  : </div>
+                    <div class="tripValue" >{{trip.startDate}}</div>
+                </div>
+              
+                <div class="row">
+                    <div class="tripSubject" >Trip end date  : </div>
+                    <div class="tripValue" >{{trip.endDate}}</div>
+                </div>
+                <div class="row">
+                    <!-- <div class="deleteTrip" (click)="deleteTrip(trip._id, trip._rev)" ><b>Delete Trip</b></div> -->
+                    <div class="deleteTrip" (click)="deleteTrip(trip)" ><b>Delete Trip</b></div>
+                </div>
+                <div class="row">
+                    <div class="deleteTrip" >Trip ID = {{trip._id}}</div>
+                    <div class="deleteTrip" >Trip Revision = {{trip._rev}}</div>
+                </div>
+                
+                <!-- <div class="menuButton" (click)="dispalyAddNewTripView()" ><b>Add New Trip</b></div> -->
+                <!-- <div class="row">
+                <label class="deleteTrip">
+                  12345
+                </label>
+              </div> -->
+
             </div>
   
           </div>

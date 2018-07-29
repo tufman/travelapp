@@ -1,0 +1,28 @@
+{
+  "apikey": "XmPUvIGtFLlOo959tkMABf-TlvTgg1rii6I-84i4YxsN",
+  "host": "7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com",
+  "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:cloudantnosqldb:eu-gb:a/843fc88a4aa94095af75b926750a0f0b:a13407e8-3edb-44a8-b1e4-b4e7d8741efe::",
+  "iam_apikey_name": "auto-generated-apikey-d67341fa-eca4-4e81-ad8d-24ce8c8098b8",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/843fc88a4aa94095af75b926750a0f0b::serviceid:ServiceId-1ade96bc-bc0a-480f-88d2-b2e08f473ebb",
+  "password": "7bc3e9c18eae30e3693380b1655ca1c0ff52375cc67e6ebb6b05aab39ce2cf79",
+  "port": 443,
+  "url": "https://7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix:7bc3e9c18eae30e3693380b1655ca1c0ff52375cc67e6ebb6b05aab39ce2cf79@7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com",
+  "username": "7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix"
+}
+
+
+
+https://7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com/0ff3d64c2b17918db5e1d85d1186ec87
+
+Delete:
+https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID.
+
+Get Document:
+https://7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com/travelapp/0ff3d64c2b17918db5e1d85d1186ec87
+
+Get all Documents:
+https://7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com/travelapp/_all_docs
+
+Delete Document:
+https://7f5176fc-839b-41b7-b19c-22402e4e65fe-bluemix.cloudant.com/travelapp/3afa40ec0aea14bcd65c04aa972036e1?rev=1-c3ecf077ec4b362c77db11ccb39bf27c
